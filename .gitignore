@@ -1,0 +1,10 @@
+*.elf
+*.o
+*.out
+
+*.cache/
+*.hw/
+*.runs/
+*.xpr
+
+*Debug/
