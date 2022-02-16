@@ -1,10 +1,12 @@
 *.elf
 *.o
 *.out
+*.log
 
 *.cache/
 *.hw/
 *.runs/
-*.xpr
 
-*Debug/
+Debug/
+webtalk/
+RemoteSystemsTempFiles/
