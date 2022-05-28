@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_Xpose_Row_Outer'
+================================================================
+* Date:           Wed Apr 20 16:15:28 2022
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        dct.prj
+* Solution:       solution7
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      8.58|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  133|  133|  133|  133|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |                  Loop Name                  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Xpose_Row_Outer_Loop_Xpose_Row_Inner_Loop  |  131|  131|         6|          2|          1|    64|    yes   |
+        +---------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|    962|   2151|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|    123|
+|Register         |        -|      -|    392|     32|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|   1354|   2306|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|      3|     13|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+-------+-----+-----+------------+------------+
+    |         Variable Name         | Operation| DSP48E|  FF | LUT | Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+-------+-----+-----+------------+------------+
+    |i_fu_187_p2                    |     +    |      0|   17|    9|           1|           4|
+    |indvar_flatten_next_fu_120_p2  |     +    |      0|   26|   12|           7|           1|
+    |j_fu_126_p2                    |     +    |      0|   17|    9|           1|           4|
+    |tmp_8_fu_176_p2                |     +    |      0|   29|   13|           8|           8|
+    |p_demorgan_fu_261_p2           |    and   |      0|    0|  128|         128|         128|
+    |tmp_46_fu_311_p2               |    and   |      0|    0|  128|         128|         128|
+    |tmp_47_fu_317_p2               |    and   |      0|    0|  128|         128|         128|
+    |exitcond_flatten_fu_114_p2     |   icmp   |      0|    0|    4|           7|           8|
+    |tmp_28_fu_205_p2               |   icmp   |      0|    0|    4|           7|           7|
+    |tmp_s_fu_132_p2                |   icmp   |      0|    0|    2|           4|           5|
+    |tmp_44_fu_255_p2               |   lshr   |      0|  291|  423|           2|         128|
+    |ap_block_state1                |    or    |      0|    0|    2|           1|           1|
+    |col_inbuf_d0                   |    or    |      0|    0|  128|         128|         128|
+    |tmp_4_fu_199_p2                |    or    |      0|    0|    7|           7|           4|
+    |i_1_i_mid2_fu_138_p3           |  select  |      0|    0|    4|           1|           1|
+    |j_0_i_cast8_mid2_v_fu_146_p3   |  select  |      0|    0|    4|           1|           4|
+    |tmp_33_fu_219_p3               |  select  |      0|    0|    8|           1|           8|
+    |tmp_34_fu_227_p3               |  select  |      0|    0|    8|           1|           8|
+    |tmp_35_fu_275_p3               |  select  |      0|    0|    8|           1|           8|
+    |tmp_42_fu_300_p3               |  select  |      0|    0|  128|           1|         128|
+    |tmp_40_fu_285_p2               |    shl   |      0|  291|  423|         128|         128|
+    |tmp_43_fu_249_p2               |    shl   |      0|  291|  423|           2|         128|
+    |ap_enable_pp0                  |    xor   |      0|    0|    2|           1|           2|
+    |ap_enable_reg_pp0_iter1        |    xor   |      0|    0|    2|           1|           2|
+    |tmp_32_fu_270_p2               |    xor   |      0|    0|    8|           8|           7|
+    |tmp_36_fu_235_p2               |    xor   |      0|    0|    8|           8|           7|
+    |tmp_45_fu_306_p2               |    xor   |      0|    0|  128|         128|           2|
+    +-------------------------------+----------+-------+-----+-----+------------+------------+
+    |Total                          |          |      0|  962| 2151|         839|        1115|
+    +-------------------------------+----------+-------+-----+-----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  27|          5|    1|          5|
+    |ap_done                      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2      |   9|          2|    1|          2|
+    |col_inbuf_address0           |  15|          3|    3|          9|
+    |i_1_i_phi_fu_106_p4          |   9|          2|    4|          8|
+    |i_1_i_reg_102                |   9|          2|    4|          8|
+    |indvar_flatten_phi_fu_83_p4  |   9|          2|    7|         14|
+    |indvar_flatten_reg_79        |   9|          2|    7|         14|
+    |j_0_i_phi_fu_94_p4           |   9|          2|    4|          8|
+    |j_0_i_reg_90                 |   9|          2|    4|          8|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 123|         26|   37|         80|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+-----+----+-----+-----------+
+    |                   Name                  |  FF | LUT| Bits| Const Bits|
+    +-----------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                |    4|   0|    4|          0|
+    |ap_done_reg                              |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0                  |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                  |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                  |    1|   0|    1|          0|
+    |ap_reg_pp0_iter2_col_inbuf_addr_reg_361  |    3|   0|    3|          0|
+    |col_inbuf_addr_reg_361                   |    3|   0|    3|          0|
+    |exitcond_flatten_reg_329                 |    1|   0|    1|          0|
+    |i_1_i_mid2_reg_338                       |    4|   0|    4|          0|
+    |i_1_i_reg_102                            |    4|   0|    4|          0|
+    |i_reg_366                                |    4|   0|    4|          0|
+    |indvar_flatten_next_reg_333              |    7|   0|    7|          0|
+    |indvar_flatten_reg_79                    |    7|   0|    7|          0|
+    |j_0_i_cast8_mid2_v_reg_344               |    4|   0|    4|          0|
+    |j_0_i_reg_90                             |    4|   0|    4|          0|
+    |p_demorgan_reg_388                       |  128|   0|  128|          0|
+    |row_outbuf_i_load_reg_371                |   16|   0|   16|          0|
+    |tmp_27_reg_351                           |    3|   0|    3|          0|
+    |tmp_28_reg_376                           |    1|   0|    1|          0|
+    |tmp_29_reg_382                           |    3|   0|    8|          5|
+    |tmp_40_reg_394                           |  128|   0|  128|          0|
+    |exitcond_flatten_reg_329                 |   64|  32|    1|          0|
+    +-----------------------------------------+-----+----+-----+-----------+
+    |Total                                    |  392|  32|  334|          5|
+    +-----------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|ap_start               |  in |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|ap_done                | out |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|ap_continue            |  in |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|ap_idle                | out |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|ap_ready               | out |    1| ap_ctrl_hs | Loop_Xpose_Row_Outer | return value |
+|row_outbuf_i_address0  | out |    6|  ap_memory |     row_outbuf_i     |     array    |
+|row_outbuf_i_ce0       | out |    1|  ap_memory |     row_outbuf_i     |     array    |
+|row_outbuf_i_q0        |  in |   16|  ap_memory |     row_outbuf_i     |     array    |
+|col_inbuf_address0     | out |    3|  ap_memory |       col_inbuf      |     array    |
+|col_inbuf_ce0          | out |    1|  ap_memory |       col_inbuf      |     array    |
+|col_inbuf_we0          | out |    1|  ap_memory |       col_inbuf      |     array    |
+|col_inbuf_d0           | out |  128|  ap_memory |       col_inbuf      |     array    |
+|col_inbuf_q0           |  in |  128|  ap_memory |       col_inbuf      |     array    |
++-----------------------+-----+-----+------------+----------------------+--------------+
+

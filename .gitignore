@@ -1,12 +1,30 @@
+.Xil/
+Debug/
+webtalk/
+RemoteSystemsTempFiles/
+
 *.elf
 *.o
 *.out
 *.log
 
+*.jou
+*.log
+*.backup.jou
+*.backup.log
+*.upgrade_log
+*.dmp
+vivado_pid*
+
 *.cache/
 *.hw/
 *.runs/
 
-Debug/
-webtalk/
-RemoteSystemsTempFiles/
+*.sdk/.metadata/
+*.sdk/webtalk/
+*.sdk/RemoteSystemsTempFiles/
+*.sdk/*_wrapper_hw_platform_0/
+*.sdk/*_bsp/ps7_cortexa9_0/
+*.sdk/**/*.o
+*.sdk/*.d
+*.sdk/**/*.a
