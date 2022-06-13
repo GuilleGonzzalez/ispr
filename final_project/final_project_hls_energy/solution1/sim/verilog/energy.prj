@@ -1,0 +1,4 @@
+sv xil_defaultlib "energy.autotb.v"
+sv xil_defaultlib "energy.v"
+sv xil_defaultlib "energy_mul_mul_16bkb.v"
+

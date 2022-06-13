@@ -1,0 +1,230 @@
+
+
+================================================================
+== Vivado HLS Report for 'leds'
+================================================================
+* Date:           Thu May 27 15:58:50 2021
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        final_project_hls_leds
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      3.10|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|   24|    3|   25|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+--------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |    0|   15|         1|          -|          -| 0 ~ 15 |    no    |
+        |- Loop 2  |    0|    7|         1|          -|          -|  0 ~ 7 |    no    |
+        +----------+-----+-----+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!exitcond1)
+	3  / (exitcond1)
+3 --> 
+	3  / (!exitcond)
+* FSM state operations: 
+
+ <State 1>: 2.32ns
+ST_1: StgValue_4 (4)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecInterface(i7* %in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str12, [1 x i8]* @p_str13, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str14, [1 x i8]* @p_str15)
+
+ST_1: StgValue_5 (5)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i7* %row_V), !map !80
+
+ST_1: StgValue_6 (6)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i10* %col_V), !map !84
+
+ST_1: StgValue_7 (7)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i7* %in_V_V), !map !88
+
+ST_1: StgValue_8 (8)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @leds_str) nounwind
+
+ST_1: StgValue_9 (9)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:5
+:5  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_10 (10)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:5
+:6  call void (...)* @_ssdm_op_SpecInterface(i10* %col_V, [8 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_11 (11)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:5
+:7  call void (...)* @_ssdm_op_SpecInterface(i7* %row_V, [8 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: tmp_V (12)  [1/1] 2.32ns  loc: final_project_hls_leds/leds.cpp:14
+:8  %tmp_V = call i7 @_ssdm_op_Read.ap_fifo.volatile.i7P(i7* %in_V_V)
+
+ST_1: tmp (13)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:17
+:9  %tmp = trunc i7 %tmp_V to i3
+
+ST_1: p_Result_1 (14)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:18
+:10  %p_Result_1 = call i4 @_ssdm_op_PartSelect.i4.i7.i32.i32(i7 %tmp_V, i32 3, i32 6)
+
+ST_1: StgValue_15 (15)  [1/1] 1.59ns  loc: final_project_hls_leds/leds.cpp:22
+:11  br label %1
+
+
+ <State 2>: 3.10ns
+ST_2: p_s (17)  [1/1] 0.00ns
+:0  %p_s = phi i10 [ 1, %0 ], [ %out_col_V, %_ZlSILi10ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit ]
+
+ST_2: i (18)  [1/1] 0.00ns
+:1  %i = phi i4 [ 0, %0 ], [ %i_2, %_ZlSILi10ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit ]
+
+ST_2: exitcond1 (19)  [1/1] 3.10ns  loc: final_project_hls_leds/leds.cpp:22
+:2  %exitcond1 = icmp eq i4 %i, %p_Result_1
+
+ST_2: empty (20)  [1/1] 0.00ns
+:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 15, i64 0)
+
+ST_2: i_2 (21)  [1/1] 2.35ns  loc: final_project_hls_leds/leds.cpp:22
+:4  %i_2 = add i4 %i, 1
+
+ST_2: StgValue_21 (22)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:22
+:5  br i1 %exitcond1, label %.preheader.preheader, label %_ZlSILi10ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit
+
+ST_2: out_col_V (24)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:23
+_ZlSILi10ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit:0  %out_col_V = shl i10 %p_s, 1
+
+ST_2: StgValue_23 (25)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:22
+_ZlSILi10ELb0EER11ap_int_baseIXT_EXT0_EXleT_Li64EEES2_i.exit:1  br label %1
+
+ST_2: StgValue_24 (27)  [1/1] 1.59ns  loc: final_project_hls_leds/leds.cpp:28
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 3>: 2.26ns
+ST_3: p_1 (29)  [1/1] 0.00ns
+.preheader:0  %p_1 = phi i7 [ %out_row_V, %_ZlsILi7ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ 0, %.preheader.preheader ]
+
+ST_3: i_1 (30)  [1/1] 0.00ns
+.preheader:1  %i_1 = phi i3 [ %i_3, %_ZlsILi7ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit ], [ 0, %.preheader.preheader ]
+
+ST_3: exitcond (31)  [1/1] 2.07ns  loc: final_project_hls_leds/leds.cpp:28
+.preheader:2  %exitcond = icmp eq i3 %i_1, %tmp
+
+ST_3: empty_4 (32)  [1/1] 0.00ns
+.preheader:3  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 7, i64 0)
+
+ST_3: i_3 (33)  [1/1] 2.26ns  loc: final_project_hls_leds/leds.cpp:28
+.preheader:4  %i_3 = add i3 %i_1, 1
+
+ST_3: StgValue_30 (34)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:28
+.preheader:5  br i1 %exitcond, label %2, label %_ZlsILi7ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit
+
+ST_3: r_V (36)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:29 (grouped into LUT with out node out_row_V)
+_ZlsILi7ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:0  %r_V = shl i7 %p_1, 1
+
+ST_3: out_row_V (37)  [1/1] 2.07ns  loc: final_project_hls_leds/leds.cpp:29 (out node of the LUT)
+_ZlsILi7ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:1  %out_row_V = or i7 %r_V, %p_1
+
+ST_3: StgValue_33 (38)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:28
+_ZlsILi7ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:2  br label %.preheader
+
+ST_3: StgValue_34 (40)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:32
+:0  call void @_ssdm_op_Write.ap_none.i7P(i7* %row_V, i7 %p_1)
+
+ST_3: StgValue_35 (41)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:33
+:1  call void @_ssdm_op_Write.ap_none.i10P(i10* %col_V, i10 %p_s)
+
+ST_3: StgValue_36 (42)  [1/1] 0.00ns  loc: final_project_hls_leds/leds.cpp:34
+:2  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (final_project_hls_leds/leds.cpp:14) [12]  (2.32 ns)
+
+ <State 2>: 3.1ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', final_project_hls_leds/leds.cpp:22) [18]  (0 ns)
+	'icmp' operation ('exitcond1', final_project_hls_leds/leds.cpp:22) [19]  (3.1 ns)
+
+ <State 3>: 2.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', final_project_hls_leds/leds.cpp:28) [30]  (0 ns)
+	'add' operation ('i', final_project_hls_leds/leds.cpp:28) [33]  (2.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

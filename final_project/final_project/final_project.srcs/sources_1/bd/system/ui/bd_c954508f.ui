@@ -1,0 +1,63 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port clk_in1 -pg 1 -y 390 -defaultsOSRD
+preplace port reset -pg 1 -y 370 -defaultsOSRD
+preplace portBus col_V -pg 1 -y 720 -defaultsOSRD
+preplace portBus row_V -pg 1 -y 700 -defaultsOSRD
+preplace inst reg_0 -pg 1 -lvl 6 -y 400 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 6 -y 280 -defaultsOSRD
+preplace inst reg_1 -pg 1 -lvl 6 -y 560 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 430 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -y 680 -defaultsOSRD
+preplace inst fir_0 -pg 1 -lvl 4 -y 400 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 6 -y 770 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 3 -y 110 -defaultsOSRD
+preplace inst fir_1 -pg 1 -lvl 4 -y 560 -defaultsOSRD
+preplace inst mux_0 -pg 1 -lvl 7 -y 640 -defaultsOSRD
+preplace inst energy_0 -pg 1 -lvl 5 -y 420 -defaultsOSRD
+preplace inst energy_1 -pg 1 -lvl 5 -y 580 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 5 -y 280 -defaultsOSRD
+preplace inst leds_controller_0 -pg 1 -lvl 8 -y 440 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace inst leds_0 -pg 1 -lvl 8 -y 670 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 9 -y 500 -defaultsOSRD
+preplace netloc xlconstant_1_dout 1 6 1 1740
+preplace netloc clk_wiz_locked 1 1 1 N
+preplace netloc mux_0_y 1 7 1 2020
+preplace netloc fir_0_y_ap_vld 1 4 1 N
+preplace netloc fir_1_y 1 4 1 1170
+preplace netloc energy_1_y 1 5 1 1460
+preplace netloc energy_0_y_ap_vld 1 5 1 N
+preplace netloc reg_1_q 1 6 1 N
+preplace netloc fir_0_y 1 4 1 1190
+preplace netloc fir_1_y_ap_vld 1 4 1 N
+preplace netloc clk_in1_1 1 0 4 20 490 NJ 490 NJ 490 870
+preplace netloc leds_0_row_V 1 8 2 NJ 700 NJ
+preplace netloc leds_0_in_V_V_read 1 8 1 2380
+preplace netloc energy_0_y 1 5 1 1460
+preplace netloc x_1 1 3 1 890
+preplace netloc fifo_generator_0_full 1 8 1 2380
+preplace netloc leds_0_col_V 1 8 2 NJ 720 NJ
+preplace netloc leds_controller_0_out_V_V_write 1 8 1 N
+preplace netloc c_counter_binary_0_Q 1 5 1 NJ
+preplace netloc xlconstant_0_dout 1 6 1 1730
+preplace netloc reg_0_q 1 6 1 1740
+preplace netloc leds_controller_0_out_V_V_din 1 8 1 2360
+preplace netloc fifo_generator_0_empty 1 8 1 2360
+preplace netloc fifo_generator_0_dout 1 8 1 2370
+preplace netloc energy_1_y_ap_vld 1 5 1 N
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 2 6 NJ 400 900 330 1180 820 NJ 820 NJ 820 2010
+preplace netloc reset_1 1 0 4 30 370 220 310 NJ 310 880J
+preplace netloc xlslice_0_Dout 1 6 2 1720 470 NJ
+preplace netloc clk_wiz_clk_out1 1 1 8 210 290 560 290 910 290 1200 230 1470 230 NJ 230 2000 570 NJ
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 4 570 440 910J 490 1190J 500 1480
+levelinfo -pg 1 0 120 390 720 1040 1330 1600 1870 2190 2520 2680 -top 0 -bot 830
+",
+}
+{
+   da_axi4_cnt: "1",
+   da_board_cnt: "3",
+   da_clkrst_cnt: "28",
+   da_ps7_cnt: "1",
+}

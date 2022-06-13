@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="energy.c" path="C:\Users\guill\Desktop\final_project_hls_energy\energy.c"/>
+  </source>
+  <testbench>
+    <originFiles name="energy_test.c" path="C:\Users\guill\Desktop\final_project_hls_energy\energy_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

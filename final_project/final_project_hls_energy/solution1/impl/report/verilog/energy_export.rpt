@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.2
+Project:             final_project_hls_energy
+Solution:            solution1
+Device target:       xc7z010clg400-1
+Report date:         Wed May 19 16:23:26 +0200 2021
+
+#=== Post-Implementation Resource usage ===
+SLICE:            6
+LUT:             16
+FF:              16
+DSP:              1
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    NA
+CP achieved post-implementation:    5.500
+Timing met

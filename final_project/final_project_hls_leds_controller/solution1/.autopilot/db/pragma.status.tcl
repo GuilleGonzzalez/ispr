@@ -1,0 +1,4 @@
+lappend pragmaStatus0 {pragma "INTERFACE" source "C:/Users/guill/Desktop/final_project_hls_leds_controller/leds_controller.cpp" location "leds_controller" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "STREAM" source "C:/Users/guill/Desktop/final_project_hls_leds_controller/leds_controller.cpp" location "leds_controller" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "out"}
+lappend pragmaStatus2 {pragma "INTERFACE" source "C:/Users/guill/Desktop/final_project_hls_leds_controller/leds_controller.cpp" location "leds_controller" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus3 {pragma "INTERFACE" source "C:/Users/guill/Desktop/final_project_hls_leds_controller/leds_controller.cpp" location "leds_controller" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

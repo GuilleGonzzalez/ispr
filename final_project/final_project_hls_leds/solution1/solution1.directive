@@ -1,0 +1,35 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="leds" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="row" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="leds" label="" functionLabel="">
+            <pragma name="STREAM">
+                <option name="variable" value="in" positionalBoolean="4"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="leds" label="" functionLabel="">
+            <pragma name="STREAM">
+                <option name="variable" value="in" positionalBoolean="4"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="leds" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="col" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="leds" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_ctrl_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

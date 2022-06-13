@@ -1,0 +1,33 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>row_V</name>
+<CType>
+<TypeName>ap_uint 7</TypeName>
+<TypeWidth>7</TypeWidth>
+<PhysicalWidth>7</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>col_V</name>
+<CType>
+<TypeName>ap_uint 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>in_V_V</name>
+<CType>
+<TypeName>ap_uint 7</TypeName>
+<TypeWidth>7</TypeWidth>
+<PhysicalWidth>7</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

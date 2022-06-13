@@ -1,0 +1,65 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu May 27 16:00:51 2021
+| Host         : HP-Omen-Guille running 64-bit major release  (build 9200)
+| Command      : report_timing -file ./report/leds_timing_synth.rpt
+| Design       : leds
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             4.344ns  (required time - arrival time)
+  Source:                 i_reg_107_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_reg_107_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.046ns  (logic 0.759ns (24.918%)  route 2.287ns (75.082%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.924 - 8.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=26, unset)           0.973     0.973    ap_clk
+                         FDRE                                         r  i_reg_107_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.340     1.313 r  i_reg_107_reg[0]/Q
+                         net (fo=5, unplaced)         0.993     2.306    i_reg_107_reg__0[0]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.601 r  p_s_reg_94[9]_i_3/O
+                         net (fo=3, unplaced)         0.467     3.068    p_s_reg_94[9]_i_3_n_4
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.192 r  p_s_reg_94[9]_i_1/O
+                         net (fo=14, unplaced)        0.827     4.019    i_reg_107
+                         FDRE                                         r  i_reg_107_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=26, unset)           0.924     8.924    ap_clk
+                         FDRE                                         r  i_reg_107_reg[0]/C
+                         clock pessimism              0.000     8.924    
+                         clock uncertainty           -0.035     8.889    
+                         FDRE (Setup_fdre_C_R)       -0.526     8.363    i_reg_107_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.363    
+                         arrival time                          -4.019    
+  -------------------------------------------------------------------
+                         slack                                  4.344    
+
+
+
+

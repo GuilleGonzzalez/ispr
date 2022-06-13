@@ -1,0 +1,135 @@
+
+
+================================================================
+== Vivado HLS Report for 'energy'
+================================================================
+* Date:           Wed May 25 15:39:39 2022
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        final_project_hls_energy
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.38|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 1
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+* FSM state operations: 
+
+ <State 1>: 6.38ns
+ST_1: StgValue_2 (3)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i16* %y) nounwind, !map !7
+
+ST_1: StgValue_3 (4)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i16 %x) nounwind, !map !13
+
+ST_1: StgValue_4 (5)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @energy_str) nounwind
+
+ST_1: x_read (6)  [1/1] 0.00ns
+:3  %x_read = call i16 @_ssdm_op_Read.ap_vld.i16(i16 %x) nounwind
+
+ST_1: StgValue_6 (7)  [1/1] 0.00ns  loc: final_project_hls_energy/energy.c:5
+:4  call void (...)* @_ssdm_op_SpecInterface(i16* %y, [7 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_7 (8)  [1/1] 0.00ns  loc: final_project_hls_energy/energy.c:5
+:5  call void (...)* @_ssdm_op_SpecInterface(i16 %x, [7 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_8 (9)  [1/1] 0.00ns  loc: final_project_hls_energy/energy.c:5
+:6  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: tmp_1 (10)  [1/1] 6.38ns  loc: final_project_hls_energy/energy.c:5
+:7  %tmp_1 = mul i16 %x_read, %x_read
+
+ST_1: StgValue_10 (11)  [1/1] 0.00ns  loc: final_project_hls_energy/energy.c:5
+:8  call void @_ssdm_op_Write.ap_vld.i16P(i16* %y, i16 %tmp_1) nounwind
+
+ST_1: StgValue_11 (12)  [1/1] 0.00ns  loc: final_project_hls_energy/energy.c:6
+:9  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 6.38ns
+The critical path consists of the following:
+	wire read on port 'x' [6]  (0 ns)
+	'mul' operation ('tmp_1', final_project_hls_energy/energy.c:5) [10]  (6.38 ns)
+	wire write on port 'y' (final_project_hls_energy/energy.c:5) [11]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

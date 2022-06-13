@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="leds_controller.cpp" path="C:\Users\guill\Desktop\final_project_hls_leds_controller\leds_controller.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="leds_controller_test.cpp" path="C:\Users\guill\Desktop\final_project_hls_leds_controller\leds_controller_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
